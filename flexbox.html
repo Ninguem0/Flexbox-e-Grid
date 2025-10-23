@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexbox - Aula de CSS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+
+  <header>
+    <h1>Flexbox - Aula de CSS</h1>
+    <a href="index.html">⬅ Voltar ao Hub</a>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>O que é o Flexbox?</h2>
+      <p>
+        O Flexbox (Flexible Box Layout) é um modelo de layout unidimensional que permite organizar elementos em linhas ou colunas, 
+        distribuindo o espaço disponível de forma inteligente entre os itens.
+      </p>
+      <p>Principais conceitos:</p>
+      <ul>
+        <li><strong>Flex Container</strong> — elemento pai que contém os itens flexíveis</li>
+        <li><strong>Flex Items</strong> — elementos filhos diretos do container</li>
+        <li><strong>Eixo Principal</strong> — direção principal (linha ou coluna)</li>
+        <li><strong>Eixo Cruzado</strong> — direção perpendicular ao eixo principal</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Propriedades do Container</h2>
+
+      <h3>display: flex</h3>
+      <p>Define um container flexível.</p>
+      <div class="flex-demo">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+
+      <h3>flex-direction</h3>
+      <p>Define a direção dos itens (linha ou coluna).</p>
+      <div class="flex-demo direction-demo">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+
+      <h3>justify-content</h3>
+      <p>Alinha os itens ao longo do eixo principal.</p>
+      <div class="flex-demo justify-demo">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+
+      <h3>align-items</h3>
+      <p>Alinha os itens ao longo do eixo cruzado.</p>
+      <div class="flex-demo align-demo">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+
+      <h3>flex-wrap</h3>
+      <p>Permite que os itens quebrem para a próxima linha.</p>
+      <div class="flex-demo wrap-demo">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Propriedades dos Itens</h2>
+
+      <h3>flex-grow</h3>
+      <p>Define a capacidade de um item crescer para ocupar espaço disponível.</p>
+      <div class="flex-demo grow-demo">
+        <div class="flex-item grow-1">1</div>
+        <div class="flex-item grow-2">2</div>
+        <div class="flex-item grow-3">3</div>
+      </div>
+
+      <h3>flex-shrink</h3>
+      <p>Define a capacidade de um item encolher quando necessário.</p>
+      <div class="flex-demo shrink-demo">
+        <div class="flex-item shrink-1">Conteúdo muito longo que deve encolher</div>
+        <div class="flex-item shrink-2">Texto médio</div>
+        <div class="flex-item shrink-3">Pouco</div>
+      </div>
+
+      <h3>align-self</h3>
+      <p>Permite que um item tenha alinhamento diferente dos demais.</p>
+      <div class="flex-demo self-demo">
+        <div class="flex-item">1</div>
+        <div class="flex-item self-center">2 (center)</div>
+        <div class="flex-item">3</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Atividade Prática</h2>
+      <p>
+        Crie um layout de cabeçalho com:
+      </p>
+      <ul>
+        <li>Logo à esquerda</li>
+        <li>Menu de navegação centralizado</li>
+        <li>Botão de ação à direita</li>
+        <li>Itens devem ser responsivos</li>
+      </ul>
+      <p>
+        Depois, crie um card com:
+      </p>
+      <ul>
+        <li>Imagem no topo</li>
+        <li>Título e descrição</li>
+        <li>Botão centralizado na parte inferior</li>
+      </ul>
+    </section>
+
+    <section class="teste-css">
+      <h2>🧩 Área de Testes</h2>
+      <p>Altere as classes abaixo no arquivo <strong>flexbox.css</strong> para ver como o CSS afeta cada elemento.</p>
+
+      <div class="teste-container">
+        <div class="caixa caixa1">.caixa1</div>
+        <div class="caixa caixa2">.caixa2</div>
+        <div class="caixa caixa3">.caixa3</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Desenvolvido por Prof. Dionatan Inhoato Markiu — © 2025</p>
+  </footer>
+
+</body>
+</html>

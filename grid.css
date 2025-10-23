@@ -1,0 +1,163 @@
+/* ====== Demonstrações Grid ====== */
+.grid-demo {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.grid-item {
+    background: #00d8ff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+/* Grid Básico */
+.basic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+/* Grid com Template */
+.template-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr;
+    grid-template-rows: 80px 120px;
+    gap: 10px;
+}
+
+/* Grid com Gap */
+.gap-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* Grid com Span */
+.span-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px 80px;
+    gap: 10px;
+}
+
+.span-grid .span-col {
+    grid-column: 1 / 3;
+}
+
+.span-grid .span-row {
+    grid-row: 2 / 4;
+}
+
+/* Grid com Áreas */
+.areas-grid {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    grid-template-rows: 80px 1fr 60px;
+    gap: 10px;
+    height: 300px;
+}
+
+.areas-grid .header { grid-area: header; }
+.areas-grid .sidebar { grid-area: sidebar; }
+.areas-grid .main { grid-area: main; }
+.areas-grid .footer { grid-area: footer; }
+
+/* Grid com Alinhamento */
+.align-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    gap: 10px;
+    align-items: center;
+    justify-items: end;
+    height: 220px;
+}
+
+/* Grid com Repeat */
+.repeat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Grid com Unidade fr */
+.fr-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+}
+
+/* Grid com Minmax */
+.minmax-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+/* ====== Área de Testes ====== */
+.teste-css {
+  background: rgba(255,255,255,0.05);
+  margin-top: 40px;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.teste-css h2 {
+  color: #00d8ff;
+  margin-bottom: 10px;
+}
+
+.caixa {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* ====== Classes para alteração ====== */
+.teste-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.caixa1 {
+  background: lightcoral;
+}
+
+.caixa2 {
+  background: lightblue;
+}
+
+.caixa3 {
+  background: lightgreen;
+}
+
+@media (max-width: 600px) {
+    .basic-grid,
+    .gap-grid,
+    .repeat-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .template-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 60px);
+    }
+}

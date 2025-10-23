@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid - Aula de CSS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+
+  <header>
+    <h1>Grid - Aula de CSS</h1>
+    <a href="index.html">⬅ Voltar ao Hub</a>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>O que é o CSS Grid?</h2>
+      <p>
+        O CSS Grid Layout é um sistema de layout bidimensional que permite organizar elementos em linhas e colunas simultaneamente.
+        É especialmente útil para criar layouts complexos e responsivos.
+      </p>
+      <p>Principais conceitos:</p>
+      <ul>
+        <li><strong>Grid Container</strong> — elemento pai que define o contexto de grid</li>
+        <li><strong>Grid Items</strong> — elementos filhos diretos do container</li>
+        <li><strong>Grid Lines</strong> — linhas que dividem o grid em células</li>
+        <li><strong>Grid Tracks</strong> — linhas ou colunas entre duas grid lines</li>
+        <li><strong>Grid Cells</strong> — unidades individuais do grid</li>
+        <li><strong>Grid Areas</strong> — áreas nomeadas que ocupam múltiplas células</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Criando um Grid Básico</h2>
+
+      <h3>display: grid</h3>
+      <p>Define um container de grid.</p>
+      <div class="grid-demo basic-grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+
+      <h3>grid-template-columns e grid-template-rows</h3>
+      <p>Define o número e tamanho das colunas e linhas.</p>
+      <div class="grid-demo template-grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+
+      <h3>gap</h3>
+      <p>Define o espaçamento entre as células do grid.</p>
+      <div class="grid-demo gap-grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Posicionamento de Itens</h2>
+
+      <h3>grid-column e grid-row</h3>
+      <p>Permite que um item ocupe múltiplas colunas ou linhas.</p>
+      <div class="grid-demo span-grid">
+        <div class="grid-item span-col">1 (col 1-3)</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item span-row">3 (row 2-4)</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+      </div>
+
+      <h3>grid-template-areas</h3>
+      <p>Define áreas nomeadas no grid para posicionamento semântico.</p>
+      <div class="grid-demo areas-grid">
+        <div class="grid-item header">Cabeçalho</div>
+        <div class="grid-item sidebar">Menu</div>
+        <div class="grid-item main">Conteúdo</div>
+        <div class="grid-item footer">Rodapé</div>
+      </div>
+
+      <h3>align-items e justify-items</h3>
+      <p>Controla o alinhamento dos itens dentro das células.</p>
+      <div class="grid-demo align-grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Recursos Avançados</h2>
+
+      <h3>Função repeat()</h3>
+      <p>Simplifica a criação de grids com padrões repetitivos.</p>
+      <div class="grid-demo repeat-grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+
+      <h3>Unidade fr</h3>
+      <p>Unidade fracionária que distribui o espaço disponível.</p>
+      <div class="grid-demo fr-grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+      </div>
+
+      <h3>minmax()</h3>
+      <p>Define tamanhos mínimos e máximos para tracks.</p>
+      <div class="grid-demo minmax-grid">
+        <div class="grid-item">Conteúdo adaptável</div>
+        <div class="grid-item">Conteúdo adaptável</div>
+        <div class="grid-item">Conteúdo adaptável</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Atividade Prática</h2>
+      <p>
+        Crie um layout de página completo com:
+      </p>
+      <ul>
+        <li>Cabeçalho fixo no topo</li>
+        <li>Menu lateral à esquerda</li>
+        <li>Conteúdo principal centralizado</li>
+        <li>Barra lateral à direita</li>
+        <li>Rodapé fixo na parte inferior</li>
+      </ul>
+      <p>
+        Depois, crie um galeria de imagens responsiva com:
+      </p>
+      <ul>
+        <li>3 colunas em telas grandes</li>
+        <li>2 colunas em tablets</li>
+        <li>1 coluna em celulares</li>
+      </ul>
+    </section>
+
+    <section class="teste-css">
+      <h2>🧩 Área de Testes</h2>
+      <p>Altere as classes abaixo no arquivo <strong>grid.css</strong> para ver como o CSS afeta cada elemento.</p>
+
+      <div class="teste-container">
+        <div class="caixa caixa1">.caixa1</div>
+        <div class="caixa caixa2">.caixa2</div>
+        <div class="caixa caixa3">.caixa3</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Desenvolvido por Prof. Dionatan Inhoato Markiu — © 2025</p>
+  </footer>
+
+</body>
+</html>
